@@ -46,3 +46,11 @@ jobs:
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: false
+  
+  release:
+    name: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Go Release Binary
+        uses: ngs/go-release.action@v1.0.2
+
